@@ -7,9 +7,11 @@
     "dev": "nodemon src/index --ignore db.json"
   },
   "dependencies": {
+    "body-parser": "^1.19.0",
     "cls-rtracer": "^2.3.0",
     "express": "~4.16.1",
     "http-errors": "~1.6.3",
-    "lowdb": "^1.0.0"
+    "lowdb": "^1.0.0",
+    "uuid": "^8.3.0"
   }
 }

@@ -10,7 +10,7 @@ const createConnection = async () => {
   db.defaults({ users: [] }).write();
 }
 
-const getConnection = async () => db;
+const getConnection = () => db;
 
 
 module.exports = {
