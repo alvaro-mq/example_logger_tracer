@@ -1,5 +1,7 @@
 'use strict';
 const { v4 } = require('uuid');
+const logger = require('../../config/logger');
+const log = logger.child({ module: 'users.model' });
 const { getConnection } = require('../../config/database');
 
 const userModel = {
@@ -11,6 +13,7 @@ const userModel = {
     return user;
   },
   findAll: () => {
+    log.info('[findAll] listando usuarios');
     const users = getConnection()
       .get('users')
       .value();

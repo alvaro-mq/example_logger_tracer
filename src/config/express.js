@@ -1,16 +1,15 @@
 'use strict';
 
 const express = require('express');
-const bodyParser = require('body-parser');
+const rTracer = require('cls-rtracer');
+
 const routes = require('../api/routes');
 
 const app = express();
 
 app.use(express.json());
-app.use('/v1', routes);
+app.use(rTracer.expressMiddleware({ useHeader: true }))
 
-/* app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: true }));
- */
+app.use('/v1', routes);
 
 module.exports = app;

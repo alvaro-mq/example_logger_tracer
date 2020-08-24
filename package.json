@@ -7,11 +7,15 @@
     "dev": "nodemon src/index --ignore db.json"
   },
   "dependencies": {
-    "body-parser": "^1.19.0",
-    "cls-rtracer": "^2.3.0",
+    "cls-hooked": "^4.2.2",
+    "cls-rtracer": "^1.4.1",
     "express": "~4.16.1",
     "http-errors": "~1.6.3",
     "lowdb": "^1.0.0",
+    "pino": "^6.5.1",
     "uuid": "^8.3.0"
+  },
+  "devDependencies": {
+    "pino-pretty": "^4.1.0"
   }
 }
