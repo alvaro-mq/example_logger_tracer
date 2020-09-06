@@ -22,9 +22,10 @@ const getAll = async (req, res, next) => {
 };
 
 const create = async (req, res, next) => {
-  log.info('[create] creando usuario');
+  log.info(req.body);
+  log.info('[create] %j', req.body);
   await UserModel.create(req.body);
-  res.status(201).send('Create success');
+  res.status(201).send({ message: 'Created success'});
 };
 
 module.exports = {

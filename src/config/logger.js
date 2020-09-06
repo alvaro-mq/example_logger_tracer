@@ -1,5 +1,5 @@
 'use strict';
-const fs = require('fs')
+const fs = require('fs');
 const pino = require('pino');
 const multistream = require('pino-multi-stream').multistream;
 const rTracer = require('cls-rtracer');
@@ -15,11 +15,15 @@ const streams = [
 
 const options = {
   name: require('../../package.json').name,
- /*  prettyPrint: {
+  /* prettyPrint: {
     levelFirst: true
   }, */
   mixin: () => {
     return { requestId: rTracer.id() }
+  },
+  redact: {
+    paths: ['password', 'otro'] ,
+    censor: '**********'
   }
 };
 
