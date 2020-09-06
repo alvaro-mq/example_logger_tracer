@@ -7,6 +7,8 @@
     "dev": "nodemon src/index --ignore db.json"
   },
   "dependencies": {
+    "body-parser": "^1.19.0",
+    "celebrate": "^12.2.0",
     "cls-hooked": "^4.2.2",
     "cls-rtracer": "^1.4.1",
     "express": "~4.16.1",
